@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\pawel\desktop\simcity2d_project\simcity2d_project\main.cpp(10): warning C4717: "Messagebox": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+  SimCity2D_Project.vcxproj -> C:\Users\Pawel\Desktop\SimCity2D_Project\x64\Debug\SimCity2D_Project.exe

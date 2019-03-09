@@ -1,0 +1,22 @@
+﻿  MainMenu.cpp
+c:\users\pawel\desktop\simcity2d_project\simcity2d_project\mainmenu.cpp(26): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\desktop\simcity2d_project\simcity2d_project\mainmenu.cpp(33): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\desktop\simcity2d_project\simcity2d_project\mainmenu.cpp(39): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\desktop\simcity2d_project\simcity2d_project\mainmenu.cpp(45): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  SimCity2D_Project.vcxproj -> C:\Users\Pawel\Desktop\SimCity2D_Project\Debug\SimCity2D_Project.exe
