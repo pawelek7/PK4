@@ -70,7 +70,7 @@ void Options::UpdateObject(float deltaTime)
 
 	if (this->buttons["BACK"]->isPressed())
 	{
-		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "Main Menu");
+		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "Main Menu", true);
 	}
 
 	//Apply selected settings

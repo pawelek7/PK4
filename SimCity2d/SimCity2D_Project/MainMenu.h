@@ -7,7 +7,7 @@
 
 class MainMenu : public StateOfProgram
 {
-	sf::SoundBuffer musicMenu;
+	//sf::SoundBuffer musicMenu;
 	sf::Texture backgroundTexture;
 	sf::RectangleShape background;
 	sf::Font font;

@@ -24,7 +24,7 @@ public:
 	StateMachine() = default;
 	~StateMachine() = default;
 
-	void NewState(std::unique_ptr<StateOfProgram> newState, std::string stateName = "unknown");
+	void NewState(std::unique_ptr<StateOfProgram> newState, std::string stateName = "unknown", bool remove = false);
 	std::unique_ptr<StateOfProgram> & GetStateFromStack();
 	void ChangeState();
 	void PopState();

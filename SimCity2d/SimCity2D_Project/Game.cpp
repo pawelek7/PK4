@@ -3,14 +3,15 @@
 Game::Game()
 {
 	ptrGame->window.create(sf::VideoMode(800, 600), "test", sf::Style::Close | sf::Style::Titlebar);
-	ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)));
+	ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "MainMenu");
 }
 
 
 void Game::RunGame()
 {
-	do
+	while (ptrGame->window.isOpen())
 	{
+
 		this->ptrGame->stateMachine.ChangeState();
 		while (accumulator > update)
 		{
@@ -26,7 +27,7 @@ void Game::RunGame()
 		accumulator += clock.restart();
 		EventUpdate();
 		UpdateMouse();
-	} while (ptrGame->window.isOpen());
+	} 
 }
 
 void Game::EventUpdate()

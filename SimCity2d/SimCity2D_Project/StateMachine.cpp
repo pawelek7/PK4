@@ -1,11 +1,10 @@
 #include "StateMachine.h"
 
-void StateMachine::NewState(std::unique_ptr<StateOfProgram> tmp_state, std::string stateName)
+void StateMachine::NewState(std::unique_ptr<StateOfProgram> tmp_state, std::string stateName, bool remove)
 {
+	this->remove = remove;
+	this->add = true;
 	this->stateName = stateName;
-	nrOfStates++;
-	mapState[nrOfStates] = stateName;
-	add = true;
 	ptrState = std::move(tmp_state);
 }
 
@@ -23,10 +22,12 @@ std::unique_ptr<StateOfProgram> & StateMachine::GetStateFromStack()
 
 void StateMachine::ChangeState()
 {
+
 	if ((remove == true) && !state.empty())
 	{
 		state.pop();
 		remove = false;
+		mapState[nrOfStates] = stateName;
 		nrOfStates--;
 	}
 	if (add == true)
@@ -34,16 +35,23 @@ void StateMachine::ChangeState()
 		if (!state.empty()) 
 		{
 			state.pop();
+			mapState[nrOfStates] = stateName;
 			nrOfStates--;
 		}
 		state.push(std::move(ptrState));
 		state.top()->InitializeObject(); //make this thing working!
 		add = false;
 
+		mapState[nrOfStates] = stateName;
 		nrOfStates++;
+	
 		//section for debugging
-		for(int i=0; i<=nrOfStates; i++)
-		std::cout << "Stack: " << mapState[i].c_str() << std::endl;
+		std::cout << "--------------" << std::endl;
+		for (int i = 0; i < nrOfStates; i++)
+		{
+			std::cout << "Stack: " << mapState[i].c_str() << std::endl;
+		}
+		std::cout << nrOfStates << std::endl;
 	}
 }
 
