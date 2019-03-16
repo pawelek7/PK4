@@ -1,6 +1,7 @@
-#pragma once
+#ifndef Gui_hpp
+#define Gui_hpp
 
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp> //SFML library
 
 enum class StateOfButton
 {BTN_IDLE = 0, BTN_HOVER = 1, BTN_ACTIVE = 2};
@@ -43,6 +44,7 @@ namespace Gui
 		//Modifiers
 		void setText(const std::string text);
 		void setId(const short unsigned id);
+		void ChangePosition(float x, float y);
 
 		//Functions
 		void update(const sf::Vector2f& mousePos);
@@ -93,3 +95,5 @@ namespace Gui
 		void Draw(sf::RenderTarget& target);
 	};
 }
+
+#endif // !Gui_hpp

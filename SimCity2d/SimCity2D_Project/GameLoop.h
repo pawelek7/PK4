@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GameLoop_hpp
+#define GameLoop_hpp
 
 #include "MapTile.h"
 #include "StateMachine.h"
@@ -9,19 +10,12 @@ class GameLoop : public StateOfProgram
 {
 	std::shared_ptr<GameAssets> ptrGame = nullptr;
 	MapTile map;
-
-	sf::Vector2i oldMousePos, newMousePos;
-
-	sf::View camera;
 	const float zoomAmount{ 1.1f };
 
-	/*
-	std::string str;
-	sf::Text text;
-	sf::Font font;
-	*/
+	sf::Vector2i oldMousePos = sf::Vector2i(0, 0), newMousePos = sf::Vector2i(0, 0);
 
-	
+	sf::View camera;
+
 public:
 	GameLoop() = default;
 	GameLoop(std::shared_ptr<GameAssets> ptrGame);
@@ -32,3 +26,5 @@ public:
 	void InitializeObject();
 	void HoldInput();
 };
+
+#endif // !GameLoop_hpp

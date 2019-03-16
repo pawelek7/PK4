@@ -26,6 +26,8 @@ void Options::HoldInput()
 				static_cast<float>(ptrGame->window.getSize().y)
 			)
 		);
+		this->buttons["BACK"]->ChangePosition(0.0f, this->ptrGame->window.getSize().y - 60);
+		this->buttons["APPLY"]->ChangePosition(this->ptrGame->window.getSize().x - 300, this->ptrGame->window.getSize().y - 60);
 	}
 }
 

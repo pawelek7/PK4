@@ -1,8 +1,9 @@
-#pragma once
+#ifndef Game_hpp
+#define Game_hpp
 
-#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp> //SFML library
+
 #include "GameAssets.h"
-
 #include "MainMenu.h"
 
 class Game
@@ -25,3 +26,5 @@ public:
 	void UpdateMouse();
 	void RunGame();
 };
+
+#endif // !Game_hpp

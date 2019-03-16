@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MainMenu_hpp
+#define MainMenu_hpp
 
 #include "StateOfProgram.h"
 #include "GameAssets.h"
@@ -12,7 +13,7 @@ class MainMenu : public StateOfProgram
 	std::map<std::string, Gui::Button*> buttons;
 	std::shared_ptr<GameAssets> ptrGame = nullptr;
 
-	sf::Texture backgroundTexture;
+//	sf::Texture backgroundTexture;
 	sf::RectangleShape background;
 	sf::Font font;
 
@@ -25,3 +26,5 @@ public:
 	void InitializeObject() override;
 	void HoldInput() override;
 };
+
+#endif // !MainMenu_hpp

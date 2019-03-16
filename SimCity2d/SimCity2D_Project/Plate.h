@@ -1,6 +1,8 @@
-#pragma once
+#ifndef Plate_hpp
+#define Plate_hpp
 
-#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp> //SFML library
+
 #include <vector>
 
 enum class TypeOfTile
@@ -9,6 +11,7 @@ enum class TypeOfTile
 class Plate
 {
 	friend class MapTile;
+	friend class CreateMap;
 
 private:
 	unsigned short _tileVersion = 0;
@@ -16,7 +19,7 @@ private:
 	unsigned int population = 0;
 	unsigned int popToUpgrade = 0;
 	unsigned short maxLevelUpgrade = 0;
-	
+	TypeOfTile _typeOfTile = TypeOfTile::NOTHING;
 	sf::Sprite _sprite;
 
 public:
@@ -24,11 +27,10 @@ public:
 	Plate(int x, int y, sf::Texture & texture, const TypeOfTile _typeOfTile, unsigned int value, unsigned int popToUpgrade, unsigned short maxLevelUpgrade);
 
 	void Draw(sf::RenderWindow& window, float dt);
-	void Update();
+//	void Update();
 
 	TypeOfTile GetTypeOfTile() const;
 	sf::Sprite GetSprite() const;
-
-
-	TypeOfTile _typeOfTile = TypeOfTile::NOTHING;
 };
+
+#endif // !Plate_hpp

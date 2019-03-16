@@ -10,6 +10,7 @@ MapTile::MapTile(unsigned int width, unsigned int height, std::map<std::string, 
 	inputFile.open("city_map.dat", std::ios::in | std::ios::binary);
 	for (int i = 0; i < width * height; i++)
 	{
+		this->selectedTiles.push_back(0);
 		this->_plate.push_back(arrayOfTerritories.at("cross"));
 		Plate& plate = this->_plate.back();
 	}
@@ -32,7 +33,7 @@ void MapTile::LoadMap(const std::string & filename, unsigned int width, unsigned
 	for (int i = 0; i < width * height; i++)
 	{
 		this->resources.push_back(255);
-
+		this->selectedTiles.push_back(0);
 		TypeOfTile typeofTile;
 		inputFile.read((char*)&typeofTile, sizeof(int));
 		switch (typeofTile)
@@ -149,6 +150,8 @@ void  MapTile::Select(sf::Vector2i from, sf::Vector2i to, std::vector<TypeOfTile
 	{
 		from.y = 0;
 	}
+
+	
 
 	for (int y = from.y; y <= to.y; ++y)
 	{

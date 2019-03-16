@@ -39,6 +39,14 @@ Gui::Button::Button(float x, float y, float width, float height,
 	this->outlineActiveColor = outline_active_color;
 }
 
+void Gui::Button::ChangePosition(float x, float y)
+{
+	this->shape.setPosition(sf::Vector2f(x, y));
+	this->text.setPosition(
+		this->shape.getPosition().x + (this->shape.getGlobalBounds().width / 2.f) - this->text.getGlobalBounds().width / 2.f,
+		this->shape.getPosition().y + (this->shape.getGlobalBounds().height / 2.f) - this->text.getGlobalBounds().height / 2.f
+	);
+}
 
 const bool Gui::Button::isPressed() const
 {

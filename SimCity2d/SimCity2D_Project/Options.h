@@ -1,4 +1,5 @@
-#pragma once
+#ifndef Options_hpp
+#define Options_hpp
 
 #include "StateOfProgram.h"
 #include "GameAssets.h"
@@ -26,3 +27,5 @@ public:
 	void InitializeObject() override;
 	void HoldInput() override;
 };
+
+#endif // !Options_hpp

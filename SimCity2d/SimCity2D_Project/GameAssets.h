@@ -1,7 +1,8 @@
-#pragma once
+#ifndef GameAssets_hpp
+#define GameAssets_hpp
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp> //SFML library
+#include <SFML/Audio.hpp> //SFML library
 
 #include "AssetManager.h"
 #include "StateMachine.h"
@@ -32,3 +33,5 @@ struct GameAssets
 	//containers
 	std::map<std::string, Plate> tile_map;
 };
+
+#endif // !GameAssets_hpp

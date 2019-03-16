@@ -1,6 +1,7 @@
-#pragma once
+#ifndef AssetManager_hpp
+#define AssetManager_hpp
 
-#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp> //SFML library
 
 #include <map>
 #include <iostream>
@@ -48,3 +49,5 @@ inline std::ostream& operator<<(std::ostream & os, const AssetManager<AssetT> & 
 {
 	return os << n.error_text;
 }
+
+#endif // !AssetManager_hpp

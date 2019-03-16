@@ -2,17 +2,22 @@
 
 CreateMap::CreateMap(std::shared_ptr<GameAssets> ptrGame) : ptrGame(ptrGame)
 {
-	
+	this->ptrGame->textureManager.LoadAsset("cross", "Resources/Textures/cross.png");
+	this->ptrGame->textureManager.LoadAsset("dirt", "Resources/Textures/dirt.png");
+	this->ptrGame->textureManager.LoadAsset("create_map", "Resources/Textures/create_map.png");
 }
 
 void CreateMap::InitializeObject()
 {
-	this->ptrGame->textureManager.LoadAsset("cross", "Resources/Textures/cross.png");
-	this->ptrGame->textureManager.LoadAsset("dirt", "Resources/Textures/dirt.png");
+	this->ptrGame->tile_map["dirt"] =
+		Plate(32, 1, this->ptrGame->textureManager.GetAsset("dirt"), TypeOfTile::DIRT, 50, 0, 1);
+	this->ptrGame->tile_map["cross"] =
+		Plate(32, 1, this->ptrGame->textureManager.GetAsset("cross"), TypeOfTile::DIRT, 50, 0, 1);
 
-	
+	this->plate = &this->ptrGame->tile_map.at("cross"); //!!!!!!!!!!!!!!
 
-
+	this->table_rectangle.setTexture(this->ptrGame->textureManager.GetAsset("create_map"));
+	this->table_rectangle.setPosition(this->ptrGame->window.getPosition().x / 2, this->ptrGame->window.getPosition().y / 2);
 
 	this->selectorRect.setSize(sf::Vector2f(64, 32));
 	this->selectorRect.setFillColor(sf::Color(225, 255, 255, 150));
@@ -25,6 +30,7 @@ void CreateMap::InitializeObject()
 
 	this->font.loadFromFile("Resources/Font/Delimax.ttf");
 	nameText.setFont(font);
+	nameText.setPosition(this->ptrGame->window.getPosition().x / 2 + 65, this->ptrGame->window.getPosition().y / 2 + 160);
 }
 
 void CreateMap::HoldInput()
@@ -36,40 +42,46 @@ void CreateMap::HoldInput()
 		if (event.type == sf::Event::Closed || event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 			this->ptrGame->window.close();
 
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
+		if (created == true)
 		{
-			oldMousePos = newMousePos;
-			newMousePos = sf::Mouse::getPosition(this->ptrGame->window);
-			camera.move(newMousePos.x - oldMousePos.x, newMousePos.y - oldMousePos.y);
-		}
 
-		if (event.type == sf::Event::MouseWheelScrolled)
-			if (event.mouseWheelScroll.delta > 0)
-				zoomViewAt({ event.mouseWheelScroll.x, event.mouseWheelScroll.y }, this->ptrGame->window, (1.f / zoomAmount));
-			else if (event.mouseWheelScroll.delta < 0)
-				zoomViewAt({ event.mouseWheelScroll.x, event.mouseWheelScroll.y }, this->ptrGame->window, zoomAmount);
-
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-		{
-			sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->camera);
-			selectTO.x = pos.y / (this->map.tileSize) + pos.x / (2 * this->map.tileSize) - this->map.width * 0.5 - 0.5;
-			selectFROM.y = pos.y / (this->map.tileSize) - pos.x / (2 * this->map.tileSize) + this->map.width * 0.5 + 0.5;
-
-			this->map.Deselect();
-			if (this->plate->_typeOfTile == TypeOfTile::CROSS)
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 			{
-				this->map.Select(selectFROM, selectTO, { this->plate->_typeOfTile, TypeOfTile::DIRT });
+				oldMousePos = newMousePos;
+				newMousePos = sf::Mouse::getPosition(this->ptrGame->window);
+				camera.move(newMousePos.x - oldMousePos.x, newMousePos.y - oldMousePos.y);
 			}
-			else
+
+			if (event.type == sf::Event::MouseWheelScrolled)
+				if (event.mouseWheelScroll.delta > 0)
+					zoomViewAt({ event.mouseWheelScroll.x, event.mouseWheelScroll.y }, this->ptrGame->window, (1.f / zoomAmount));
+				else if (event.mouseWheelScroll.delta < 0)
+					zoomViewAt({ event.mouseWheelScroll.x, event.mouseWheelScroll.y }, this->ptrGame->window, zoomAmount);
+
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				this->map.Select(selectFROM, selectTO,
-					{
-						this->plate->_typeOfTile,   TypeOfTile::DIRT,
-						TypeOfTile::NOTHING,                TypeOfTile::CROSS,
-						TypeOfTile::HOUSES,        TypeOfTile::SHOPS,
-						TypeOfTile::FACTORY
-					});
+				sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->camera);
+				selectTO.x = pos.y / (this->map.tileSize) + pos.x / (2 * this->map.tileSize) - this->map.width * 0.5 - 0.5;
+				selectFROM.y = pos.y / (this->map.tileSize) - pos.x / (2 * this->map.tileSize) + this->map.width * 0.5 + 0.5;
+
+				this->map.Deselect();
+				if (this->plate->_typeOfTile == TypeOfTile::CROSS)
+				{
+					this->map.Select(selectFROM, selectTO, { this->plate->_typeOfTile, TypeOfTile::DIRT });
+				}
+				else
+				{
+					this->map.Select(selectFROM, selectTO,
+						{
+							this->plate->_typeOfTile,   TypeOfTile::DIRT,
+							TypeOfTile::NOTHING,                TypeOfTile::CROSS,
+							TypeOfTile::HOUSES,        TypeOfTile::SHOPS,
+							TypeOfTile::FACTORY
+						});
+				}
+				//}
 			}
+
 		}
 	}
 
@@ -89,7 +101,7 @@ void CreateMap::HoldInput()
 			nameText.setString(s);
 			sizeSquare = s;
 		}
-		if (event.text.unicode == 13)
+		if (event.text.unicode == 13 && created == false)
 		{
 			CreateTilesToEdit(sizeSquare);
 		}
@@ -108,22 +120,25 @@ void CreateMap::DrawObject(float deltaTime)
 	if (created == true)
 		this->map.Draw(this->ptrGame->window, deltaTime);
 
-	this->ptrGame->window.draw(this->selectorRect);
-	this->selectTexture->Draw(this->ptrGame->window);
-	this->ptrGame->window.draw(nameText);
-	this->ptrGame->window.setView(this->camera);
+	if (created == false)
+		this->ptrGame->window.draw(this->table_rectangle);
+
+	if (created == true)
+		this->ptrGame->window.draw(this->selectorRect);
+
+	if (created == true)
+		this->selectTexture->Draw(this->ptrGame->window);
+
+	if (created == false)
+		this->ptrGame->window.draw(nameText);
+
+	if (created == true)
+		this->ptrGame->window.setView(this->camera);
 }
 
 void CreateMap::CreateTilesToEdit(std::string s)
 {
 	int sizeOfSquare = atoi(s.c_str());
-
-	this->ptrGame->tile_map["dirt"] =
-		Plate(32, 1, this->ptrGame->textureManager.GetAsset("dirt"), TypeOfTile::DIRT, 50, 0, 1);
-	this->ptrGame->tile_map["cross"] =
-		Plate(32, 1, this->ptrGame->textureManager.GetAsset("cross"), TypeOfTile::DIRT, 50, 0, 1);
-
-	this->plate = &this->ptrGame->tile_map.at("cross"); //!!!!!!!!!!!!!!11
 
 	map = MapTile(sizeOfSquare, sizeOfSquare, ptrGame->tile_map);
 
