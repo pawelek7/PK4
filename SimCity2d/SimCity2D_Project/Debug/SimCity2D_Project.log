@@ -1,2 +1,78 @@
-﻿  StateMachine.cpp
+﻿  CreateMap.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(55): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(56): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  Game.cpp
+  GameLoop.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  MainMenu.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mainmenu.cpp(26): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mainmenu.cpp(33): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mainmenu.cpp(39): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mainmenu.cpp(45): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  MapTile.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(11): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(32): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(71): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(73): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(76): warning C4244: "=": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(77): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(117): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(126): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(135): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(144): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+  Options.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\options.cpp(45): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\options.cpp(51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  main.cpp
+  Generowanie kodu...
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\main.cpp(11): warning C4717: "Messagebox": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
   SimCity2D_Project.vcxproj -> C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\Debug\SimCity2D_Project.exe

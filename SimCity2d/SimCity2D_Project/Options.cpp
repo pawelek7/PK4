@@ -7,6 +7,28 @@ Options::Options(std::shared_ptr<GameAssets> ptrGame) :ptrGame(ptrGame)
 	this->ptrGame->textureManager.LoadAsset("SimCity_background", "Resources/Textures/SimCity_background.jpg");
 }
 
+void Options::HoldInput()
+{
+	if (this->buttons["BACK"]->isPressed())
+	{
+		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "Main Menu", true);
+	}
+
+	//Apply selected settings
+	if (this->buttons["APPLY"]->isPressed())
+	{
+		this->ptrGame->graphic.resolution = this->modes[this->dropDownList["RESOLUTION"]->getActiveElementId()];
+		this->ptrGame->window.create(this->ptrGame->graphic.resolution, this->ptrGame->graphic.title, sf::Style::Default);
+		this->background.setSize(
+			sf::Vector2f
+			(
+				static_cast<float>(ptrGame->window.getSize().x),
+				static_cast<float>(ptrGame->window.getSize().y)
+			)
+		);
+	}
+}
+
 void Options::InitializeObject()
 {
 	this->background.setSize(
@@ -68,35 +90,18 @@ void Options::UpdateObject(float deltaTime)
 	//Button functionality
 	//Quit the game
 
-	if (this->buttons["BACK"]->isPressed())
-	{
-		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "Main Menu", true);
-	}
-
-	//Apply selected settings
-	if (this->buttons["APPLY"]->isPressed())
-	{
-		this->ptrGame->graphic.resolution = this->modes[this->dropDownList["RESOLUTION"]->getActiveElementId()];
-		this->ptrGame->window.create(this->ptrGame->graphic.resolution, this->ptrGame->graphic.title, sf::Style::Default);
-		this->background.setSize(
-			sf::Vector2f
-			(
-				static_cast<float>(ptrGame->window.getSize().x),
-				static_cast<float>(ptrGame->window.getSize().y)
-			)
-		);
-	}
+	
 
 	//Dropdown lists
 	for (auto &it : this->dropDownList)
 	{
-		it.second->update(this->ptrGame->mousePosView, deltaTime);
+		it.second->Update(this->ptrGame->mousePosView, deltaTime);
 	}
 
 	//Dropdown lists functionality
 }
 
-void Options::DrawObject()
+void Options::DrawObject(float elapsedTime)
 {
 	this->ptrGame->window.draw(background);
 	for (auto &it : this->buttons)
@@ -106,6 +111,6 @@ void Options::DrawObject()
 
 	for (auto &it : this->dropDownList)
 	{
-		it.second->render(this->ptrGame->window);
+		it.second->Draw(this->ptrGame->window);
 	}
 }

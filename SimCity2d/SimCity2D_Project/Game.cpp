@@ -2,30 +2,30 @@
 
 Game::Game()
 {
-	ptrGame->window.create(sf::VideoMode(800, 600), "test", sf::Style::Close | sf::Style::Titlebar);
+	ptrGame->window.create(sf::VideoMode(800, 600), "Project - Simcity 2000", sf::Style::Close | sf::Style::Titlebar);
 	ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "MainMenu");
 }
-
 
 void Game::RunGame()
 {
 	while (ptrGame->window.isOpen())
 	{
-
 		this->ptrGame->stateMachine.ChangeState();
 		while (accumulator > update)
 		{
 			accumulator -= update;
 			elapsedTime = update.asSeconds();
+			ptrGame->stateMachine.GetStateFromStack()->HoldInput();
+			EventUpdate();
 			ptrGame->stateMachine.GetStateFromStack()->UpdateObject(elapsedTime);
 		}
 		this->ptrGame->stateMachine.ChangeState();
 
 		ptrGame->window.clear();
-		ptrGame->stateMachine.GetStateFromStack()->DrawObject();
+		ptrGame->stateMachine.GetStateFromStack()->DrawObject(elapsedTime);
 		ptrGame->window.display();
+
 		accumulator += clock.restart();
-		EventUpdate();
 		UpdateMouse();
 	} 
 }
@@ -34,10 +34,25 @@ void Game::EventUpdate()
 {
 	while (this->ptrGame->window.pollEvent(this->event))
 	{
+		switch (event.type)
+		{
+		case sf::Event::Closed:
+			this->ptrGame->window.close();
+			break;
+		case sf::Event::KeyPressed:
+			if (event.key.code == sf::Keyboard::Escape)
+			{
+				this->ptrGame->window.close();
+			}
+			break;
+		}
+
+		/*
 		if (this->event.type == sf::Event::Closed)
 		{
 			this->ptrGame->window.close();
 		}
+		*/
 	}
 }
 

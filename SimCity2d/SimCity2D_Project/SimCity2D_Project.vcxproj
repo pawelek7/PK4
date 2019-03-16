@@ -131,28 +131,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AnimatedTexture.cpp" />
+    <ClCompile Include="CreateMap.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Gui.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MapTile.cpp" />
     <ClCompile Include="Options.cpp" />
+    <ClCompile Include="Plate.cpp" />
     <ClCompile Include="StateMachine.cpp" />
-    <ClCompile Include="Territory.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimatedTexture.h" />
     <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="CreateMap.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameAssets.h" />
+    <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Gui.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MapTile.h" />
     <ClInclude Include="Options.h" />
+    <ClInclude Include="Plate.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="StateOfProgram.h" />
-    <ClInclude Include="Territory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

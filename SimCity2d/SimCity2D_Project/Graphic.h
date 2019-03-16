@@ -3,9 +3,11 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
+//FIX THIS LATER!!!
+
 class Graphic
 {
-public: //tmp all public for tests
+public: 
 	std::string title = "SimCity 2D";
 	sf::VideoMode resolution = sf::VideoMode::getDesktopMode();
 	bool fullScreen = false;

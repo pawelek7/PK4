@@ -35,9 +35,9 @@ void MainMenu::InitializeObject()
 		sf::Color(70, 255, 70, 200), sf::Color(250, 250, 250, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(70, 70, 70, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 
-	this->buttons["LOAD"] = new Gui::Button(
+	this->buttons["CREATE_MAP"] = new Gui::Button(
 		this->ptrGame->window.getSize().x / 2 - 100, this->ptrGame->window.getSize().y / 2 - 100, 250.f, 50.f,
-		&this->font, "Load", 50,
+		&this->font, "Create Map", 50,
 		sf::Color(70, 255, 70, 200), sf::Color(250, 250, 250, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(70, 70, 70, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 
@@ -63,38 +63,40 @@ void MainMenu::UpdateObject(float elapsedTime)
 	{
 		it.second->update(this->ptrGame->mousePosView);
 	}
-
-	//New game
-	if (this->buttons["GAME"]->isPressed())
-	{
-		std::cout << "Not implemented yet!\n";
-	}
-	
-	//Settings
-	if (this->buttons["SETTINGS"]->isPressed())
-	{
-		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new Options(ptrGame)), "Options");
-	}
-
-	if (this->buttons["LOAD"]->isPressed())
-	{
-		std::cout << "Not implemented yet!\n";
-	}
-
-	//Quit the game
-	if (this->buttons["EXIT"]->isPressed())
-	{
-		this->ptrGame->window.close();
-	}
-	
 }
 
-void MainMenu::DrawObject()
+void MainMenu::DrawObject(float elapsedTime)
 {
 	
 	this->ptrGame->window.draw(background);
 	for (auto &it : this->buttons)
 	{
 		it.second->render(ptrGame->window);
+	}
+}
+
+void MainMenu::HoldInput()
+{
+	//New game
+	if (this->buttons["GAME"]->isPressed())
+	{
+		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new GameLoop(ptrGame)), "Game");
+	}
+
+	//Settings
+	if (this->buttons["SETTINGS"]->isPressed())
+	{
+		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new Options(ptrGame)), "Options");
+	}
+
+	if (this->buttons["CREATE_MAP"]->isPressed())
+	{
+		ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new CreateMap(ptrGame)), "Create map");
+	}
+
+	//Quit the game
+	if (this->buttons["EXIT"]->isPressed())
+	{
+		this->ptrGame->window.close();
 	}
 }

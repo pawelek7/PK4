@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) try
 	Game SimCity2D;
 	SimCity2D.RunGame();
 
-	system("pause");
+
 
 	return EXIT_SUCCESS;
 }
