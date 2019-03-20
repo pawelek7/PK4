@@ -1,23 +1,28 @@
 #include "MapTile.h"
 
-MapTile::MapTile(unsigned int width, unsigned int height, std::map<std::string, Plate> & arrayOfTerritories)
+MapTile::MapTile(unsigned int size_of_map, const std::string & filename, std::map<std::string, Plate> & arrayOfTerritories, std::shared_ptr<GameAssets> ptrGame)
+	:ptrGame(ptrGame)
 {
-	std::ifstream inputFile;
+	this->width = size_of_map;
+	this->height = size_of_map;
+	this->size_of_map = size_of_map;
 
-	this->width = width;
-	this->height = height;
-
-	inputFile.open("city_map.dat", std::ios::in | std::ios::binary);
+	std::ofstream outputFile("Resources/Maps/" + filename + ".dat", std::ios::binary);
 	for (int i = 0; i < width * height; i++)
 	{
+		outputFile.write((char*)"1", sizeof(int));
 		this->selectedTiles.push_back(0);
 		this->_plate.push_back(arrayOfTerritories.at("cross"));
 		Plate& plate = this->_plate.back();
 	}
-	inputFile.close();
+	outputFile.close();
+
+	center = sf::Vector2f(this->width, this->height*0.5);
+	center *= float(this->tileSize);
 }
 
-MapTile::MapTile(const std::string & filename, unsigned int width, unsigned int height, std::map<std::string, Plate> & arratyOfTerritories)
+MapTile::MapTile(const std::string & filename, unsigned int width, unsigned int height, std::map<std::string, Plate> & arratyOfTerritories, std::shared_ptr<GameAssets> ptrGame)
+	:ptrGame(ptrGame)
 {
 	LoadMap(filename, width, height, arratyOfTerritories);
 }
@@ -69,9 +74,48 @@ void MapTile::SaveMap(const std::string & filename)
 
 void MapTile::Draw(sf::RenderWindow& window, float dt)
 {
-	for (int y = 0; y < this->height; ++y)
+	fromX = (this->ptrGame->mousePosGrid.x + this->ptrGame->mousePosGrid.y - tileSize * 2)/tileSize ;
+	toX = (this->ptrGame->mousePosGrid.x + this->ptrGame->mousePosGrid.y + tileSize * 2)/tileSize ;
+
+	fromY = (this->ptrGame->mousePosGrid.y - this->ptrGame->mousePosGrid.x - tileSize * 2)/tileSize ;
+	toY = (this->ptrGame->mousePosGrid.y - this->ptrGame->mousePosGrid.x + tileSize * 2)/tileSize ;
+	
+	if (fromX < 0)
 	{
-		for (int x = 0; x < this->width; ++x)
+		fromX = 0;
+	}
+	else if (fromX >= size_of_map)
+	{
+		fromX = size_of_map - 1;
+	}
+	if (fromY < 0)
+	{
+		fromY = 0;
+	}
+	else if (fromY >= size_of_map)
+	{
+		fromY = size_of_map - 1;
+	}
+	if (toX < 0)
+	{
+		toX = 0;
+	}
+	else if (toX >= size_of_map)
+	{
+		toX = size_of_map - 1;
+	}
+	if (toY < 0)
+	{
+		toY = 0;
+	}
+	else if (toY >= size_of_map)
+	{
+		toY = size_of_map - 1;
+	}
+
+	for (int y=fromY; y < this->toY; y++)
+	{
+		for (int x = fromX; x < this->toX; x++)
 		{
 			sf::Vector2f pos;
 			pos.x = (x - y) * this->tileSize + this->width * this->tileSize;
@@ -79,11 +123,6 @@ void MapTile::Draw(sf::RenderWindow& window, float dt)
 			this->_plate[y*this->width + x]._sprite.setPosition(pos);
 
 			this->_plate[y*this->width + x].Draw(window, dt);
-
-
-
-
-
 
 
 			if (this->selectedTiles[y*this->width + x])
@@ -170,6 +209,7 @@ void  MapTile::Select(sf::Vector2i from, sf::Vector2i to, std::vector<TypeOfTile
 			}
 		}
 	}
+	std::cout << selected << std::endl;
 }
 
 void MapTile::Deselect()

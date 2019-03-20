@@ -86,5 +86,5 @@ void GameLoop::InitializeObject()
 		Plate(32, 1, this->ptrGame->textureManager.GetAsset("dirt"),TypeOfTile::DIRT , 50 , 0, 1);
 
 	
-	map = MapTile("city_map.dat", 32, 32, ptrGame->tile_map);
+	map = MapTile("city_map.dat", 32, 32, ptrGame->tile_map, ptrGame);
 }

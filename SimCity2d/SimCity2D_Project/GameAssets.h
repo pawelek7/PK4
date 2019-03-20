@@ -8,7 +8,7 @@
 #include "StateMachine.h"
 #include "Graphic.h"
 #include "Plate.h"
-#include "MapTile.h"
+//#include "MapTile.h"
 
 struct GameAssets
 {

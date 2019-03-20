@@ -78,8 +78,12 @@ namespace Gui
 
 	class SelectTexture
 	{
-		float size = 0.0f;
+		float keyTime = 0.0f;
+		float keyTimeMax = 1.0f;
+		float sizeX = 0.0f, sizeY = 0.0f;
 		bool active = false;
+		bool hidden = false;
+		Gui::Button* hide_btn;
 		sf::RectangleShape bounds;
 		sf::Sprite sheet;
 		sf::RectangleShape selector;
@@ -87,12 +91,16 @@ namespace Gui
 		sf::IntRect textureRect;
 
 	public:
-		SelectTexture(float x, float y, float width, float height, float size, const sf::Texture *texture_sheet);
-		~SelectTexture() = default;
+		SelectTexture(float x, float y, float width, float height, float sizeX, float sizeY, const sf::Texture *texture_sheet,
+			sf::Font& font, std::string text);
+		~SelectTexture();
 		const sf::IntRect& getTextureRect() const;
+		const bool& getActive() const;
 
-		void Update(const sf::Vector2i & mousePosWindow);
+		void Update(const sf::Vector2i & mousePosWindow, const float & dt);
 		void Draw(sf::RenderTarget& target);
+		const bool getKeyTime();
+		void UpdateKeyTime(const float & dt);
 	};
 }
 
