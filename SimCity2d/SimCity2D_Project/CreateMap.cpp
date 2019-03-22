@@ -26,6 +26,32 @@ void CreateMap::InitGui()
 		this->table_rectangle.getPosition().y - (this->table_rectangle.getGlobalBounds().height / 2.f)
 	);
 
+
+	/* Create gui elements. */
+	this->guiSystem.emplace("rightClickMenu", Gui::GameGui(sf::Vector2f(196, 16), 2, false, this->ptrGame->stylesGuis.at("button"),
+		{
+			std::make_pair("Flatten $" + this->ptrGame->tile_map["grass"].getCost(),         "grass"),
+			std::make_pair("Forest $" + this->ptrGame->tile_map["forest"].getCost(),        "forest"),
+			std::make_pair("Residential Zone $" + this->ptrGame->tile_map["residential"].getCost(),   "residential"),
+			std::make_pair("Commercial Zone $" + this->ptrGame->tile_map["commercial"].getCost(),    "commercial"),
+			std::make_pair("Industrial Zone $" + this->ptrGame->tile_map["industrial"].getCost(),    "industrial"),
+			std::make_pair("Road $" + this->ptrGame->tile_map["road"].getCost(),          "road")
+		}));
+
+	this->guiSystem.emplace("selectionCostText", Gui::GameGui(sf::Vector2f(196, 16), 0, false, this->ptrGame->stylesGuis.at("text"),
+		{ std::make_pair("", "") }));
+
+	this->guiSystem.emplace("infoBar", Gui::GameGui(sf::Vector2f(this->ptrGame->window.getSize().x / 5, 16), 2, true, this->ptrGame->stylesGuis.at("button"),
+		{
+			std::make_pair("time",          "time"),
+			std::make_pair("funds",         "funds"),
+			std::make_pair("population",    "population"),
+			std::make_pair("employment",    "employment"),
+			std::make_pair("current tile",  "tile")
+		}));
+	this->guiSystem.at("infoBar").setPosition(sf::Vector2f(0, this->ptrGame->window.getSize().y - 16));
+	this->guiSystem.at("infoBar").schow();
+
 }
 
 void CreateMap::InitSelector()
@@ -102,6 +128,9 @@ void CreateMap::HoldInput()
 {
 	sf::Event event;
 
+	sf::Vector2f guiPos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window),
+		this->guiView);
+
 	while (this->ptrGame->window.pollEvent(event))
 	{
 		if (event.type == sf::Event::Closed || event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
@@ -109,12 +138,29 @@ void CreateMap::HoldInput()
 
 		if (created == true)
 		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+			{
+				this->ptrGame->cameraGame.move(0, 10);
+			}
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			{
+				this->ptrGame->cameraGame.move(10, 0);
+			}
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+			{
+				this->ptrGame->cameraGame.move(-10, 0);
+			}
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+			{
+				this->ptrGame->cameraGame.move(0, -10);
+			}
+
 
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 			{
 				oldMousePos = newMousePos;
 				newMousePos = sf::Mouse::getPosition(this->ptrGame->window);
-				camera.move(newMousePos.x - oldMousePos.x, newMousePos.y - oldMousePos.y);
+				this->ptrGame->cameraGame.move(newMousePos.x - oldMousePos.x, newMousePos.y - oldMousePos.y);
 			}
 
 			if (event.type == sf::Event::MouseWheelScrolled)
@@ -127,7 +173,7 @@ void CreateMap::HoldInput()
 			{
 				if (mouseEvent == MouseEvents::SELECT)
 				{
-					sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->camera);
+					sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->ptrGame->cameraGame);
 					selectTO.x = pos.y / (this->map.tileSize) + pos.x / (2 * this->map.tileSize) - this->map.width * 0.5 - 0.5;
 					selectTO.y = pos.y / (this->map.tileSize) - pos.x / (2 * this->map.tileSize) + this->map.width * 0.5 + 0.5;
 
@@ -138,7 +184,7 @@ void CreateMap::HoldInput()
 					}
 					else
 					{
-						this->map.Select(selectFROM, selectTO,
+						this->map.Select(selectFROM, selectTO, //city zamiast map !!!!!!!!!!!
 							{
 								this->plate->_typeOfTile,   TypeOfTile::DIRT,
 								TypeOfTile::NOTHING,                TypeOfTile::CROSS,
@@ -148,6 +194,7 @@ void CreateMap::HoldInput()
 					}
 
 				}
+				
 
 
 
@@ -157,7 +204,7 @@ void CreateMap::HoldInput()
 				if (this->mouseEvent != MouseEvents::SELECT)
 				{
 					this->mouseEvent = MouseEvents::SELECT;
-					sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->camera);
+					sf::Vector2f pos = this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->ptrGame->cameraGame);
 					selectFROM.x = pos.y / (this->map.tileSize) + pos.x / (2 * this->map.tileSize) - this->map.width * 0.5 - 0.5;
 					selectFROM.y = pos.y / (this->map.tileSize) - pos.x / (2 * this->map.tileSize) + this->map.width * 0.5 + 0.5;
 				}
@@ -267,6 +314,25 @@ void CreateMap::UpdateObject(float deltaTime)
 	{
 		it.second->update(this->ptrGame->mousePosView);
 	}
+
+
+
+
+	//-------------------- SIMCITY GUI UPDATE
+
+	//this->city.update(dt);
+	/* Update the info bar at the bottom of the screen */
+
+	/*
+	this->guiSystem.at("infoBar").setEntryText(0, "Day: " + std::to_string(this->city.day));
+	this->guiSystem.at("infoBar").setEntryText(1, "$" + std::to_string(long(this->city.funds)));
+	this->guiSystem.at("infoBar").setEntryText(2, std::to_string(long(this->city.population)) + " (" + std::to_string(long(this->city.getHomeless())) + ")");
+	this->guiSystem.at("infoBar").setEntryText(3, std::to_string(long(this->city.employable)) + " (" + std::to_string(long(this->city.getUnemployed())) + ")");
+	this->guiSystem.at("infoBar").setEntryText(4, tileTypeToStr(currentTile->tileType));
+	*/
+
+	/* Highlight entries of the right click context menu */
+	this->guiSystem.at("rightClickMenu").highlight(this->guiSystem.at("rightClickMenu").getEntry(this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->ptrGame->cameraGame)));
 }
 
 void CreateMap::DrawObject(float deltaTime)
@@ -292,7 +358,7 @@ void CreateMap::DrawObject(float deltaTime)
 		this->ptrGame->window.draw(nameText);
 
 	if (created == true)
-		this->ptrGame->window.setView(this->camera);
+		this->ptrGame->window.setView(this->ptrGame->cameraGame);
 
 	if (created == false)
 		this->DrawButtons();
@@ -300,6 +366,10 @@ void CreateMap::DrawObject(float deltaTime)
 	if (created == false)
 		this->ptrGame->window.draw(sizeMapText);
 
+	//draw gui game SIMCITY
+
+	this->ptrGame->window.setView(this->guiView);
+	for (auto gui : this->guiSystem) this->ptrGame->window.draw(gui.second);
 }
 
 void CreateMap::DrawButtons()
@@ -317,7 +387,7 @@ void CreateMap::CreateTilesToEdit(const std::string & filename, int how_length)
 
 	center = sf::Vector2f(this->map.width, this->map.height*0.5);
 	center *= float(this->map.tileSize);
-	camera.setCenter(center);
+	this->ptrGame->cameraGame.setCenter(center);
 
 	created = true;
 }
@@ -325,12 +395,12 @@ void CreateMap::CreateTilesToEdit(const std::string & filename, int how_length)
 void CreateMap::zoomViewAt(sf::Vector2i pixel, sf::RenderWindow& window, float zoom)
 {
 	const sf::Vector2f beforeCoord{ window.mapPixelToCoords(pixel) };
-	camera.zoom(zoom);
-	window.setView(camera);
+	this->ptrGame->cameraGame.zoom(zoom);
+	window.setView(this->ptrGame->cameraGame);
 	const sf::Vector2f afterCoord{ window.mapPixelToCoords(pixel) };
 	const sf::Vector2f offsetCoords{ beforeCoord - afterCoord };
-	camera.move(offsetCoords);
-	window.setView(camera);
+	this->ptrGame->cameraGame.move(offsetCoords);
+	window.setView(this->ptrGame->cameraGame);
 }
 
 CreateMap::~CreateMap()

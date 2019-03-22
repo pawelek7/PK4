@@ -13,7 +13,7 @@ class Plate
 	friend class MapTile;
 	friend class CreateMap;
 
-private:
+public:
 	unsigned short _tileVersion = 0;
 	unsigned int value = 0;
 	unsigned int population = 0;
@@ -27,7 +27,9 @@ public:
 	Plate(int x, int y, sf::Texture & texture, const TypeOfTile _typeOfTile, unsigned int value, unsigned int popToUpgrade, unsigned short maxLevelUpgrade);
 
 	void Draw(sf::RenderWindow& window, float dt);
-//	void Update();
+	void Update() {}
+
+	int getCost() { return value; }
 
 	TypeOfTile GetTypeOfTile() const;
 	sf::Sprite GetSprite() const;

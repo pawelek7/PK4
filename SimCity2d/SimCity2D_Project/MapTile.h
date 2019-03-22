@@ -16,6 +16,7 @@
 
 class MapTile
 {
+public:
 	friend class CreateMap;
 	std::shared_ptr<GameAssets> ptrGame = nullptr;
 	unsigned int width = 0;

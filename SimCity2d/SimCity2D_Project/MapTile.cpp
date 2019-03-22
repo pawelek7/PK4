@@ -74,11 +74,25 @@ void MapTile::SaveMap(const std::string & filename)
 
 void MapTile::Draw(sf::RenderWindow& window, float dt)
 {
+	/*
 	fromX = (this->ptrGame->mousePosGrid.x + this->ptrGame->mousePosGrid.y - tileSize * 2)/tileSize ;
 	toX = (this->ptrGame->mousePosGrid.x + this->ptrGame->mousePosGrid.y + tileSize * 2)/tileSize ;
 
 	fromY = (this->ptrGame->mousePosGrid.y - this->ptrGame->mousePosGrid.x - tileSize * 2)/tileSize ;
 	toY = (this->ptrGame->mousePosGrid.y - this->ptrGame->mousePosGrid.x + tileSize * 2)/tileSize ;
+	*/
+	/*
+	sf::Vector2f pos(this->ptrGame->cameraGame.getCenter());
+	toX = pos.y / (this->tileSize) + pos.x / (2 * this->tileSize) - this->width * 2;
+	toY = pos.y / (this->tileSize) - pos.x / (2 * this->tileSize) + this->width * 2;
+	fromX = pos.y / (this->tileSize) + pos.x / (2 * this->tileSize) - this->width * 2;
+	fromY = pos.y / (this->tileSize) - pos.x / (2 * this->tileSize) + this->width * 2;
+	*/
+	int tileSize2 = 64;
+	fromX = (this->ptrGame->cameraGame.getCenter().x) / tileSize2 - 25;
+	toX = (this->ptrGame->cameraGame.getCenter().x) / tileSize2 + 25;
+	fromY = (this->ptrGame->cameraGame.getCenter().y) / tileSize - 25;
+	toY = (this->ptrGame->cameraGame.getCenter().y) / tileSize + 25;
 	
 	if (fromX < 0)
 	{
@@ -209,7 +223,6 @@ void  MapTile::Select(sf::Vector2i from, sf::Vector2i to, std::vector<TypeOfTile
 			}
 		}
 	}
-	std::cout << selected << std::endl;
 }
 
 void MapTile::Deselect()

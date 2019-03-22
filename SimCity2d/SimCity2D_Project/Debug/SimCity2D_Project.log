@@ -1,32 +1,105 @@
-﻿  MapTile.cpp
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(11): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(20): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+﻿  CreateMap.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gui.h(87): warning C4244: "argument": konwersja z "T" do "unsigned int", możliwa utrata danych
           with
           [
               T=float
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(20): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(23): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(44): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(52): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(72): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(79): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(85): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(102): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(106): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(163): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(177): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(178): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(208): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(209): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(300): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(311): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(312): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(388): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(38): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(87): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(95): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(103): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(111): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(121): warning C4244: "=": konwersja z "unsigned int" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(388): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(122): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(157): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(166): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(175): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(184): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
   SimCity2D_Project.vcxproj -> C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\Debug\SimCity2D_Project.exe

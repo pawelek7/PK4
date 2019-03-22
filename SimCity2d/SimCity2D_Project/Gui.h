@@ -1,13 +1,117 @@
 #ifndef Gui_hpp
 #define Gui_hpp
-
+#include <utility>
 #include <SFML/Graphics.hpp> //SFML library
-
+#include <string>
+#include <vector>
 enum class StateOfButton
 {BTN_IDLE = 0, BTN_HOVER = 1, BTN_ACTIVE = 2};
 
 namespace Gui
 {
+	class GameGuiBase
+	{
+	public:
+		sf::Color bodyCol;
+		sf::Color bodyHighCol;
+		sf::Color borderCol;
+		sf::Color borderHighlightCol;
+		sf::Font * font;
+		sf::Color bodyHighlightCol;
+		sf::Color textCol;
+		sf::Color textHighlightCol;
+		float borderSize = 0.0f;
+
+
+		GameGuiBase() = default;
+		GameGuiBase(sf::Font * font, float borderSize, sf::Color bodyCol, sf::Color borderCol, sf::Color textCol, sf::Color bodyHighlightCol, sf::Color borderHighlightCol, sf::Color textHighlightCol)
+		{
+			this->bodyCol = bodyCol;
+			this->borderCol = borderCol;
+			this->textCol = textCol;
+			this->bodyHighlightCol = bodyHighlightCol;
+			this->borderHighlightCol = borderHighlightCol;
+			this->textHighlightCol = textHighlightCol;
+			this->font = font;
+			this->borderSize = borderSize;
+		}
+	};
+
+	class GuiEntry
+	{
+	public:
+		sf::RectangleShape shape;
+		std::string message = "";
+		sf::Text text;
+
+
+		GuiEntry(const std::string& message, sf::RectangleShape shape, sf::Text text)
+		{
+			this->message = message;
+			this->shape = shape;
+			this->text = text;
+		}
+	};
+
+	class GameGui : public sf::Transformable, public sf::Drawable
+	{
+	public:
+		GameGuiBase style;
+		sf::Vector2f dimensions;
+		int padding;
+
+	
+		std::vector<GuiEntry> entries;
+
+		bool visible;
+
+		GameGui(sf::Vector2f dimensions, int padding, bool horizontal, GameGuiBase& style, std::vector<std::pair<std::string, std::string>> entries)
+		{
+			visible = false;
+			this->style = style;
+			this->dimensions = dimensions;
+			this->padding = padding;
+
+			sf::RectangleShape shape;
+			shape.setSize(dimensions);
+			shape.setFillColor(style.bodyCol);
+			shape.setOutlineThickness(-style.borderSize);
+			shape.setOutlineColor(style.borderCol);
+
+			for (auto entry : entries)
+			{
+				sf::Text text;
+				text.setString(entry.first);
+				text.setFont(*style.font);
+				text.setFillColor(style.textCol);
+				text.setCharacterSize(dimensions.y - style.borderSize - padding);
+
+				this->entries.push_back(GuiEntry(entry.second, shape, text));
+			}
+		}
+
+		sf::Vector2f getSize();
+
+		int getEntry(const sf::Vector2f mousePos);
+
+		void setEntryText(int entry, std::string text);
+
+		void setDimenstions(sf::Vector2f dimenstions);
+
+		virtual void draw(sf::RenderTarget & target, sf::RenderStates states) const;
+
+		void schow();
+
+		void hide();
+
+		void highlight(const int entry);
+
+		std::string activate(const int entry);
+
+		std::string activate(const sf::Vector2f mousePos);
+
+	};
+
 	class Button
 	{
 		StateOfButton buttonState = StateOfButton::BTN_IDLE;

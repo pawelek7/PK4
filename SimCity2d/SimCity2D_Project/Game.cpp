@@ -4,6 +4,17 @@ Game::Game()
 {
 	ptrGame->window.create(sf::VideoMode(800, 600), "Project - Simcity 2000", sf::Style::Close | sf::Style::Titlebar);
 	ptrGame->stateMachine.NewState(std::unique_ptr<StateOfProgram>(new MainMenu(ptrGame)), "MainMenu");
+
+
+
+	this->ptrGame->stylesGuis["button"] = Gui::GameGuiBase(&this->ptrGame->fontManager.GetAsset("Delimax"), 1,
+		sf::Color(0xc6, 0xc6, 0xc6), sf::Color(0x94, 0x94, 0x94), sf::Color(0x00, 0x00, 0x00),
+		sf::Color(0x61, 0x61, 0x61), sf::Color(0x94, 0x94, 0x94), sf::Color(0x00, 0x00, 0x00));
+	this->ptrGame->stylesGuis["text"] = Gui::GameGuiBase(&this->ptrGame->fontManager.GetAsset("Delimax"), 0,
+		sf::Color(0x00, 0x00, 0x00, 0x00), sf::Color(0x00, 0x00, 0x00), sf::Color(0xff, 0xff, 0xff),
+		sf::Color(0x00, 0x00, 0x00, 0x00), sf::Color(0x00, 0x00, 0x00), sf::Color(0xff, 0x00, 0x00));
+
+	return;
 }
 
 void Game::RunGame()

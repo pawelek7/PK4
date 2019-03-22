@@ -31,6 +31,7 @@ class CreateMap : public StateOfProgram
 
 	Gui::SelectTexture *selectTexture; 
 	std::map<std::string, Gui::Button*> buttons;
+	std::map<std::string, Gui::GameGui> guiSystem;
 	MouseEvents mouseEvent = MouseEvents::VOID; //what mouse do
 
 	//---SFML---//

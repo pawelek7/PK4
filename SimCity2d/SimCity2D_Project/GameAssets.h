@@ -8,6 +8,7 @@
 #include "StateMachine.h"
 #include "Graphic.h"
 #include "Plate.h"
+#include "Gui.h"
 //#include "MapTile.h"
 
 struct GameAssets
@@ -19,6 +20,7 @@ struct GameAssets
 
 	//window
 	sf::RenderWindow window;
+	sf::View cameraGame;
 
 	//mouse
 	sf::Vector2i mousePosScreen;
@@ -32,6 +34,7 @@ struct GameAssets
 
 	//containers
 	std::map<std::string, Plate> tile_map;
+	std::map<std::string, Gui::GameGuiBase> stylesGuis;
 };
 
 #endif // !GameAssets_hpp

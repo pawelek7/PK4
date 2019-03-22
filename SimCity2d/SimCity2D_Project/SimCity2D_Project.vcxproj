@@ -136,6 +136,7 @@
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Gui.cpp" />
+    <ClCompile Include="HoldGameplay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MapTile.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Gui.h" />
+    <ClInclude Include="HoldGameplay.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MapTile.h" />
     <ClInclude Include="Options.h" />
