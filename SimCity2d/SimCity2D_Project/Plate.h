@@ -8,6 +8,8 @@
 enum class TypeOfTile
 {NOTHING = 0, DIRT = 1, HOUSES = 2, SHOPS = 3, FACTORY = 4, CROSS = 5};
 
+//std::string tileTypeToStr(TypeOfTile type);
+
 class Plate
 {
 	friend class MapTile;
@@ -33,6 +35,22 @@ public:
 
 	TypeOfTile GetTypeOfTile() const;
 	sf::Sprite GetSprite() const;
+
+	std::string tileTypeToStr(TypeOfTile type)
+	{
+		switch (type)
+		{
+		default:
+		case TypeOfTile::NOTHING:				return "Void";
+		case TypeOfTile::DIRT:				return "Flatten";
+		case TypeOfTile::HOUSES:				return "Forest";
+		case TypeOfTile::SHOPS:				return "Water";
+		case TypeOfTile::FACTORY:			return "Residential Zone";
+		case TypeOfTile::CROSS:			return "Commercial Zone";
+		}
+	}
+
+	//std::string tileTypeToStr(TypeOfTile type);
 };
 
 #endif // !Plate_hpp

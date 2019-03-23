@@ -155,14 +155,14 @@ void CreateMap::HoldInput()
 				this->ptrGame->cameraGame.move(0, -10);
 			}
 
-
+			/*
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 			{
 				oldMousePos = newMousePos;
 				newMousePos = sf::Mouse::getPosition(this->ptrGame->window);
 				this->ptrGame->cameraGame.move(newMousePos.x - oldMousePos.x, newMousePos.y - oldMousePos.y);
 			}
-
+			*/
 			if (event.type == sf::Event::MouseWheelScrolled)
 				if (event.mouseWheelScroll.delta > 0)
 					zoomViewAt({ event.mouseWheelScroll.x, event.mouseWheelScroll.y }, this->ptrGame->window, (1.f / zoomAmount));
@@ -184,7 +184,7 @@ void CreateMap::HoldInput()
 					}
 					else
 					{
-						this->map.Select(selectFROM, selectTO, //city zamiast map !!!!!!!!!!!
+						this->city.mapTile.Select(selectFROM, selectTO, //city zamiast map !!!!!!!!!!!
 							{
 								this->plate->_typeOfTile,   TypeOfTile::DIRT,
 								TypeOfTile::NOTHING,                TypeOfTile::CROSS,
@@ -192,9 +192,15 @@ void CreateMap::HoldInput()
 								TypeOfTile::FACTORY
 							});
 					}
-
+					this->guiSystem.at("selectionCostText").setEntryText(0, "$" + std::to_string(this->plate->value * this->city.mapTile.selected));
+					if (this->city.funds <= this->city.mapTile.selected * this->plate->value)
+						this->guiSystem.at("selectionCostText").highlight(0);
+					else
+						this->guiSystem.at("selectionCostText").highlight(-1);
+					this->guiSystem.at("selectionCostText").setPosition(guiPos + sf::Vector2f(16, -16));
+					this->guiSystem.at("selectionCostText").schow();
 				}
-				
+				this->guiSystem.at("rightClickMenu").highlight(this->guiSystem.at("rightClickMenu").getEntry(guiPos));
 
 
 
@@ -323,13 +329,13 @@ void CreateMap::UpdateObject(float deltaTime)
 	//this->city.update(dt);
 	/* Update the info bar at the bottom of the screen */
 
-	/*
+	
 	this->guiSystem.at("infoBar").setEntryText(0, "Day: " + std::to_string(this->city.day));
 	this->guiSystem.at("infoBar").setEntryText(1, "$" + std::to_string(long(this->city.funds)));
 	this->guiSystem.at("infoBar").setEntryText(2, std::to_string(long(this->city.population)) + " (" + std::to_string(long(this->city.getHomeless())) + ")");
 	this->guiSystem.at("infoBar").setEntryText(3, std::to_string(long(this->city.employable)) + " (" + std::to_string(long(this->city.getUnemployed())) + ")");
-	this->guiSystem.at("infoBar").setEntryText(4, tileTypeToStr(currentTile->tileType));
-	*/
+	this->guiSystem.at("infoBar").setEntryText(4, "Test Gui");//tile.tileTypeToStr(this->plate->_typeOfTile));
+	
 
 	/* Highlight entries of the right click context menu */
 	this->guiSystem.at("rightClickMenu").highlight(this->guiSystem.at("rightClickMenu").getEntry(this->ptrGame->window.mapPixelToCoords(sf::Mouse::getPosition(this->ptrGame->window), this->ptrGame->cameraGame)));
@@ -368,7 +374,7 @@ void CreateMap::DrawObject(float deltaTime)
 
 	//draw gui game SIMCITY
 
-	this->ptrGame->window.setView(this->guiView);
+	//this->ptrGame->window.setView(this->guiView);
 	for (auto gui : this->guiSystem) this->ptrGame->window.draw(gui.second);
 }
 

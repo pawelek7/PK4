@@ -5,6 +5,7 @@
 #include "MapTile.h"
 #include "StateOfProgram.h"
 #include "GameAssets.h"
+#include "HoldGameplay.h"
 
 #include <string>
 
@@ -21,6 +22,7 @@ class CreateMap : public StateOfProgram
 	bool created = false; //if map grid is created
 	
 	MapTile map; //object of map
+	HoldGameplay city;
 	Plate* plate; //object of 1x1 tile
 
 	std::vector<char> nameMapV; //vector stores chars of map name

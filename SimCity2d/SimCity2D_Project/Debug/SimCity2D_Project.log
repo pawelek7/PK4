@@ -52,11 +52,6 @@ c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(10
           [
               T=unsigned int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(163): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-          with
-          [
-              T=int
-          ]
 c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(177): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
           with
           [
@@ -67,37 +62,37 @@ c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(17
           [
               T=int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(208): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(214): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(209): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(215): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(300): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(306): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(311): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(317): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(312): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(318): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(388): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(394): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(388): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\createmap.cpp(394): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
           with
           [
               T=float
