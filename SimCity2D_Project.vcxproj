@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationSprite.h" />
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="AssetsOfGame.h" />
+    <ClInclude Include="AudioManagement.h" />
+    <ClInclude Include="ButtonBase.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="Disaster.h" />
+    <ClInclude Include="DriveToDestination.h" />
+    <ClInclude Include="DropList.h" />
+    <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="FireBrigade.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="HighVoltageLines.h" />
+    <ClInclude Include="HoldGameplay.h" />
+    <ClInclude Include="Hospital.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="IDvector.h" />
+    <ClInclude Include="LoadGame.h" />
+    <ClInclude Include="MapGenerator.h" />
+    <ClInclude Include="Mathematic.h" />
+    <ClInclude Include="CreateNewspaper.h" />
+    <ClInclude Include="Article.h" />
+    <ClInclude Include="Newspaper.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="PathFinding.h" />
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="PictureInformation.h" />
+    <ClInclude Include="PoliceStation.h" />
+    <ClInclude Include="PowerHouse.h" />
+    <ClInclude Include="RandomEngine.h" />
+    <ClInclude Include="RequireConnecting.h" />
+    <ClInclude Include="Road.h" />
+    <ClInclude Include="Route.h" />
+    <ClInclude Include="SeedGenerator.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="StartNewGame.h" />
+    <ClInclude Include="Statistics.h" />
+    <ClInclude Include="Structure.h" />
+    <ClInclude Include="HudLeft.h" />
+    <ClInclude Include="HudUp.h" />
+    <ClInclude Include="Launcher.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MapTile.h" />
+    <ClInclude Include="LoadData.h" />
+    <ClInclude Include="PictureButton.h" />
+    <ClInclude Include="SmallTile.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="StateOfProgram.h" />
+    <ClInclude Include="TableBase.h" />
+    <ClInclude Include="TableInformation.h" />
+    <ClInclude Include="TaxesInformation.h" />
+    <ClInclude Include="TextBoxInput.h" />
+    <ClInclude Include="TextButton.h" />
+    <ClInclude Include="TextureBuildManager.h" />
+    <ClInclude Include="Tornado.h" />
+    <ClInclude Include="VectorManager.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="VehiclePhysics.h" />
+    <ClInclude Include="VehicleProcedure.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CreateNewspaper.cpp" />
+    <ClCompile Include="AudioManagement.cpp" />
+    <ClCompile Include="ButtonBase.cpp" />
+    <ClCompile Include="Disaster.cpp" />
+    <ClCompile Include="DriveToDestination.cpp" />
+    <ClCompile Include="DropList.cpp" />
+    <ClCompile Include="Exceptions.cpp" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="FireBrigade.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="HighVoltageLines.cpp" />
+    <ClCompile Include="HoldGameplay.cpp" />
+    <ClCompile Include="Hospital.cpp" />
+    <ClCompile Include="House.cpp" />
+    <ClCompile Include="Statistics.cpp" />
+    <ClCompile Include="LoadGame.cpp" />
+    <ClCompile Include="MapGenerator.cpp" />
+    <ClCompile Include="Mathematic.cpp" />
+    <ClCompile Include="Newspaper.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="PathFinding.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="PictureInformation.cpp" />
+    <ClCompile Include="PoliceStation.cpp" />
+    <ClCompile Include="PowerHouse.cpp" />
+    <ClCompile Include="RandomEngine.cpp" />
+    <ClCompile Include="RequireConnecting.cpp" />
+    <ClCompile Include="Road.cpp" />
+    <ClCompile Include="Route.cpp" />
+    <ClCompile Include="SeedGenerator.cpp" />
+    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="StartNewGame.cpp" />
+    <ClCompile Include="Structure.cpp" />
+    <ClCompile Include="HudLeft.cpp" />
+    <ClCompile Include="HudUp.cpp" />
+    <ClCompile Include="Launcher.cpp" />
+    <ClCompile Include="LoadData.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="PictureButton.cpp" />
+    <ClCompile Include="SmallTile.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="TableBase.cpp" />
+    <ClCompile Include="TableInformation.cpp" />
+    <ClCompile Include="TaxesInformation.cpp" />
+    <ClCompile Include="TextBoxInput.cpp" />
+    <ClCompile Include="TextButton.cpp" />
+    <ClCompile Include="AnimationSprite.cpp" />
+    <ClCompile Include="MapTIle.cpp" />
+    <ClCompile Include="TextureBuildManager.cpp" />
+    <ClCompile Include="Tornado.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="VehiclePhysics.cpp" />
+    <ClCompile Include="VehicleProcedure.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment_shader.frag" />
+    <None Include="vertex_shader.vert" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5188CD5A-205B-49C8-8307-A8DB9C498E8C}</ProjectGuid>
+    <RootNamespace>SimCity2DProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Pawel\Documents\GitHub\PK4\SimCity2d\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
