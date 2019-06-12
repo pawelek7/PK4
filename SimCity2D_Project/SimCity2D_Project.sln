@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimCity2D_Project", "SimCity2D_Project.vcxproj", "{5188CD5A-205B-49C8-8307-A8DB9C498E8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Debug|x64.ActiveCfg = Debug|x64
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Debug|x64.Build.0 = Debug|x64
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Debug|x86.ActiveCfg = Debug|Win32
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Debug|x86.Build.0 = Debug|Win32
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Release|x64.ActiveCfg = Release|x64
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Release|x64.Build.0 = Release|x64
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Release|x86.ActiveCfg = Release|Win32
+		{5188CD5A-205B-49C8-8307-A8DB9C498E8C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF5C0EDE-C00A-49EB-B878-B8786554820E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+00-00-0000
+The City named {{town_name}} {{event}}! 
+The city of {{town_name}} has undergone many changes this month. 
+The current budget is 0$, while the number of residents is {{population}}. 
+Unemployed people are {{unemployed}} and homeless {{homeless}}. 
+The average satisfaction of respondents is {{happiness}}%. 

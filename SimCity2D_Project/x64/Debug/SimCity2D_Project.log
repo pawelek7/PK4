@@ -1,0 +1,210 @@
+﻿  ButtonBase.cpp
+  DropList.cpp
+  Game.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\game.cpp(68): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+  GameLoop.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(23): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(23): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(89): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(94): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(101): warning C4244: "argument": konwersja z "unsigned int" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(133): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(134): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(159): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\gameloop.cpp(160): warning C4244: "=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  HighVoltageLines.cpp
+  HoldGameplay.cpp
+  House.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\house.cpp(9): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\house.cpp(19): warning C4244: "argument": konwersja z "_Rep" do "unsigned int", możliwa utrata danych
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\house.cpp(44): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\memory(2539): warning C4244: "argument": konwersja z "const int" do "float", możliwa utrata danych
+  c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\house.cpp(80): note: zobacz odwołanie do funkcji szablon; wystąpienie „std::unique_ptr<House,std::default_delete<_Ty>> std::make_unique<House,const int&,const sf::Texture&,const TileSpecialise&,const std::vector<Frames,std::allocator<Frames>>&,const int&,0>(const int &,const sf::Texture &,const TileSpecialise &,const std::vector<Frames,std::allocator<Frames>> &,const int &)” jest kompilowane
+          with
+          [
+              _Ty=House
+          ]
+  MapGenerator.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(17): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(26): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(28): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\mapgenerator.cpp(39): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  PathFinding.cpp
+  Pause.cpp
+  PerlinNoise.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\perlinnoise.cpp(35): warning C4244: "argument": konwersja z "uint64_t" do "unsigned int", możliwa utrata danych
+  RequireConnecting.cpp
+  Road.cpp
+  SeedGenerator.cpp
+  StartNewGame.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(38): warning C4244: "argument": konwersja z "float" do "unsigned short", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(36): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(43): warning C4244: "argument": konwersja z "float" do "unsigned short", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(48): warning C4244: "argument": konwersja z "float" do "unsigned short", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(53): warning C4244: "argument": konwersja z "float" do "unsigned short", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(56): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(58): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(59): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(62): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(62): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(64): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(64): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(70): warning C4244: "argument": konwersja z "float" do "unsigned int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\startnewgame.cpp(123): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+  Structure.cpp
+  HudLeft.cpp
+  HudUp.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(48): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(51): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(54): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(57): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(60): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(63): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+  Launcher.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(49): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(89): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(99): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(103): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(107): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\launcher.cpp(128): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  LoadData.cpp
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\memory(2539): warning C4244: "argument": konwersja z "_Ty" do "float", możliwa utrata danych
+          with
+          [
+              _Ty=int
+          ]
+  c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\loaddata.cpp(39): note: zobacz odwołanie do funkcji szablon; wystąpienie „std::unique_ptr<House,std::default_delete<_Ty>> std::make_unique<House,int,AssetT&,TileSpecialise,std::vector<Frames,std::allocator<Frames>>&,int,0>(int &&,AssetT &,TileSpecialise &&,std::vector<Frames,std::allocator<Frames>> &,int &&)” jest kompilowane
+          with
+          [
+              _Ty=House,
+              AssetT=sf::Texture
+          ]
+  Generowanie kodu...
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudup.cpp(77): warning C4172: zwracanie adresu lokalnej zmiennej lub tymczasowej
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\hudleft.cpp(59): warning C4172: zwracanie adresu lokalnej zmiennej lub tymczasowej
+  Trwa kompilowanie...
+  main.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  MainMenu.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  PictureButton.cpp
+  SmallTile.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\smalltile.cpp(13): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  StateMachine.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\statemachine.cpp(51): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  TableInformation.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\tableinformation.cpp(41): warning C4244: "argument": konwersja z "float" do "unsigned int", możliwa utrata danych
+  TextBoxInput.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.h(26): warning C4244: "inicjowanie": konwersja z "float" do "sf::Int32", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.cpp(10): warning C4244: "argument": konwersja z "float" do "unsigned int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\textboxinput.cpp(34): warning C4244: "argument": konwersja z "float" do "unsigned int", możliwa utrata danych
+  TextButton.cpp
+  AnimationSprite.cpp
+  MapTIle.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(47): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(48): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(49): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(50): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(56): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(64): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(72): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(80): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(91): warning C4244: "=": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(148): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(156): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(164): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(172): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(222): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\maptile.cpp(224): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  TextureBuildManager.cpp
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\texturebuildmanager.cpp(39): warning C4244: "argument": konwersja z "_Rep" do "unsigned int", możliwa utrata danych
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  Generowanie kodu...
+c:\users\pawel\documents\github\pk4\simcity2d\simcity2d_project\smalltile.cpp(156): warning C4715: "SmallTile::SpriteClicked”: niewszystkie ścieżki kodu zwracają wartość
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: wystąpił konflikt typu maszyny modułu „x86” z typem maszyny docelowej „x64”

@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\GameEngine">
+      <UniqueIdentifier>{1c8e3e35-43c9-412b-ac90-f0f607931c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\GameEngine">
+      <UniqueIdentifier>{f527080e-30f9-435c-95ae-8809b72001da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Gui">
+      <UniqueIdentifier>{8fe6f81b-dc37-49f3-9157-6fde79cd39db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Gui">
+      <UniqueIdentifier>{6c8f2301-c346-4a2a-a6c0-d92911478c4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\States">
+      <UniqueIdentifier>{a3bb0cb6-494b-4873-a059-2c40ee1ee40e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\States">
+      <UniqueIdentifier>{e76d42e6-87cb-4c5f-a546-5ca338c40d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\GameHolders">
+      <UniqueIdentifier>{6be16a59-de90-4449-bef9-56c00eaf00cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\GameHolders">
+      <UniqueIdentifier>{a58f40c5-79d2-4f7c-97a5-1a768581ad96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\MapGenerate">
+      <UniqueIdentifier>{09a556cc-47b3-4f20-a4df-0b5eed9625cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\MapGenerate">
+      <UniqueIdentifier>{c639d209-f079-4709-8d2d-7e46adc83c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Tiles">
+      <UniqueIdentifier>{b7b718d7-b410-4408-9b34-f5a37a6401b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Tiles">
+      <UniqueIdentifier>{2c3daf05-4540-48bd-9fa3-e3d235b0c41f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\VehicleComponents">
+      <UniqueIdentifier>{ec9a60b4-9ce5-4ff7-b815-7989f0f01645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\VehicleComponents">
+      <UniqueIdentifier>{bcce59e4-bebc-4724-a377-fa8aec47a5b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Disasters">
+      <UniqueIdentifier>{554f59d8-9de8-461a-a266-dcbf14a75a2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Disasters">
+      <UniqueIdentifier>{a0957ec5-2d4e-4cc6-beba-a46a299b3031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Information">
+      <UniqueIdentifier>{2ab0195d-4b0d-437b-b747-a2aebb007970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Information">
+      <UniqueIdentifier>{11d39c25-f6fe-42e9-aaab-8c5816b02766}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="StateOfProgram.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsOfGame.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonBase.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="TextButton.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureButton.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="HudUp.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="HudLeft.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="Launcher.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoop.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSprite.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTile.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadData.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="HoldGameplay.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="SeedGenerator.h">
+      <Filter>Pliki nagłówkowe\MapGenerate</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Pliki nagłówkowe\MapGenerate</Filter>
+    </ClInclude>
+    <ClInclude Include="MapGenerator.h">
+      <Filter>Pliki nagłówkowe\MapGenerate</Filter>
+    </ClInclude>
+    <ClInclude Include="SmallTile.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Structure.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Road.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="House.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBoxInput.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="StartNewGame.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="IDvector.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RequireConnecting.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="HighVoltageLines.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureBuildManager.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DropList.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinding.h">
+      <Filter>Pliki nagłówkowe\MapGenerate</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorManager.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="TableInformation.h">
+      <Filter>Pliki nagłówkowe\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadGame.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerHouse.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="DriveToDestination.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Mathematic.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleProcedure.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="VehiclePhysics.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Vehicle.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Route.h">
+      <Filter>Pliki nagłówkowe\VehicleComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Hospital.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManagement.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Pliki nagłówkowe\States</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureInformation.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="Disaster.h">
+      <Filter>Pliki nagłówkowe\Disasters</Filter>
+    </ClInclude>
+    <ClInclude Include="Tornado.h">
+      <Filter>Pliki nagłówkowe\Disasters</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>Pliki nagłówkowe\Disasters</Filter>
+    </ClInclude>
+    <ClInclude Include="FireBrigade.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="PoliceStation.h">
+      <Filter>Pliki nagłówkowe\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateNewspaper.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="Newspaper.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="Article.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomEngine.h">
+      <Filter>Pliki nagłówkowe\GameHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="TaxesInformation.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="TableBase.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="Statistics.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="NoCopyNoMove.h">
+      <Filter>Pliki nagłówkowe\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEventInfo.h">
+      <Filter>Pliki nagłówkowe\Information</Filter>
+    </ClInclude>
+    <ClInclude Include="MovableDisaster.h">
+      <Filter>Pliki nagłówkowe\Disasters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>Pliki źródłowe\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Pliki źródłowe\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonBase.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="TextButton.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureButton.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HudUp.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HudLeft.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="Launcher.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoop.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationSprite.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="MapTIle.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadData.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="SeedGenerator.cpp">
+      <Filter>Pliki źródłowe\MapGenerate</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Pliki źródłowe\MapGenerate</Filter>
+    </ClCompile>
+    <ClCompile Include="MapGenerator.cpp">
+      <Filter>Pliki źródłowe\MapGenerate</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallTile.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Road.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Structure.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBoxInput.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="StartNewGame.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="HoldGameplay.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="RequireConnecting.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="HighVoltageLines.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureBuildManager.cpp">
+      <Filter>Pliki źródłowe\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DropList.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinding.cpp">
+      <Filter>Pliki źródłowe\MapGenerate</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadGame.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerHouse.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="DriveToDestination.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Mathematic.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleProcedure.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="VehiclePhysics.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Vehicle.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Route.cpp">
+      <Filter>Pliki źródłowe\VehicleComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Hospital.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManagement.cpp">
+      <Filter>Pliki źródłowe\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Pliki źródłowe\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureInformation.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="TableInformation.cpp">
+      <Filter>Pliki źródłowe\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="Disaster.cpp">
+      <Filter>Pliki źródłowe\Disasters</Filter>
+    </ClCompile>
+    <ClCompile Include="Tornado.cpp">
+      <Filter>Pliki źródłowe\Disasters</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>Pliki źródłowe\Disasters</Filter>
+    </ClCompile>
+    <ClCompile Include="FireBrigade.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="PoliceStation.cpp">
+      <Filter>Pliki źródłowe\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateNewspaper.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="Newspaper.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomEngine.cpp">
+      <Filter>Pliki źródłowe\GameHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="TaxesInformation.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="TableBase.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="Statistics.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEventInfo.cpp">
+      <Filter>Pliki źródłowe\Information</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableDisaster.cpp">
+      <Filter>Pliki źródłowe\Disasters</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex_shader.vert">
+      <Filter>Pliki nagłówkowe</Filter>
+    </None>
+    <None Include="fragment_shader.frag">
+      <Filter>Pliki nagłówkowe</Filter>
+    </None>
+  </ItemGroup>
+</Project>

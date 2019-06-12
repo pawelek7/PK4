@@ -1,0 +1,20 @@
+﻿  Structure.cpp
+c:\users\ania\desktop\simcity2d_project\structure.cpp(208): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\ania\desktop\simcity2d_project\structure.cpp(234): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\ania\desktop\simcity2d_project\structure.cpp(255): warning C4244: "argument": konwersja z "unsigned int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+c:\users\ania\desktop\simcity2d_project\structure.cpp(419): warning C4553: „==”: Wynik wyrażenia nie jest używany; czy chodziło Ci o „=”?
+c:\users\ania\desktop\simcity2d_project\structure.cpp(462): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+c:\users\ania\desktop\simcity2d_project\structure.cpp(472): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+  SimCity2D_Project.vcxproj -> C:\Users\Ania\Desktop\SimCity2D_Project\Debug\SimCity2D_Project.exe

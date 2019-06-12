@@ -1,0 +1,6 @@
+00-00-0000
+The City named {{town_name}} {{event}}! 
+The City was built based on seed 00000000, and the map size is xxx. 
+Your task is to expand the city and settle as many people as possible. 
+At the start you get 0$ and {{homeless}} homeless people wanting to enter your city. 
+Good luck! 
